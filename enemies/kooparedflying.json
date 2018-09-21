@@ -1,0 +1,47 @@
+{   
+   "quadcount": 2,
+   
+   "speedx": 0,
+
+   "animationtype": "frames",
+   "animationframes": 2,
+   "animationstart": 1,
+   "animationspeed": 0.2,
+   
+   "killsonsides": true,
+   "killsonbottom": true,
+   "notkilledfromblocksbelow": true,
+   "nocollidestops": true,
+   "portalable": false,
+
+   "transforms": true,
+   "transformsinto": "koopared",
+   "transformtrigger": "stomp",
+   "stompable": true,
+   
+   "movement": "flyvertical",
+   
+   "width": 0.75,
+   "height": 0.75,
+   "static": false,
+   "active": true,
+   "category": 5,
+   
+   "mask": [   true, 
+            true, false, true, true, true,
+            true, true, true, true, true,
+            false, false, true, false, false,
+            true, true, false, false, true,
+            false, true, true, false, false,
+            true, false, true, true, true],
+            
+   "emancipatecheck": true,
+   "autodelete": true,
+   
+   "gravity": 0,
+   
+   "offsetx": 6,
+   "offsety": 0,
+   "quadcenterX": 8,
+   "quadcenterY": 19
+}
