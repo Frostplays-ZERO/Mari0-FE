@@ -1,0 +1,4 @@
+name=super mario bros
+author=nintendo
+description=the classic maps we all know and  love
+lives=3
