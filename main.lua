@@ -384,7 +384,7 @@ function love.load(arg)
 	
 	fontimage = love.graphics.newImage("graphics/font.png")
 	fontimageback = love.graphics.newImage("graphics/fontback.png")
-	fontglyphs = "0123456789abcdefghijklmnopqrstuvwxyz.:/,\"C-_A* !{}?'()+=><#%"
+	fontglyphs = "0123456789abcdefghijklmnopqrstuvwxyz.:/,\"C-_A* !{}?'()+=><#%OU"
 	fontquads = {}
 	for i = 1, string.len(fontglyphs) do
 		fontquads[string.sub(fontglyphs, i, i)] = love.graphics.newQuad((i-1)*8, 0, 7, 8, fontimage:getWidth(), fontimage:getHeight())
@@ -396,13 +396,13 @@ function love.load(arg)
 	
 	love.graphics.clear()
 	love.graphics.setColor(100, 100, 100)
-	loadingtexts = {"reticulating splines", "rendering important stuff", "01110000011011110110111001111001", "sometimes, i dream about cheese",
-					"baking cake", "happy explosion day", "raising coolness by a fifth", "yay facepunch", "stabbing myself", "sharpening knives",
+	loadingtexts = {"reticulating splines", "rendering important stuff", "70 6f 6e 79", "sometimes, i dream about cheese",
+					"baking caaaake...", "happy explosion day", "raising coolness by a fifth", "drawing pink umlaUts", "stabbing myself", "sharpening knives",
 					"tanaka, thai kick", "slime will find you", "becoming self-aware", "it's a secret to everybody", "there is no minus world", 
-					"oh my god, jc, a bomb", "silly loading message here", "motivational art by jorichi", "love.graphics.print(\"loading..\", 200, 120)",
+					"oh my god, jc, a bomb", "silly loading message here", "motivational art by jorichi", "lOve.graphics.print(\"loading...\", 200, 120)",
 					"you're my favorite deputy", "licensed under wtfpl", "banned in argentina", "loading anti-piracy module", "watch out there's a sni",
-					"attack while its tail's up!", "what a horrible night to have a curse", "han shot first", "establishing connection to nsa servers..",
-					"how do i programm", "making palette inaccurate..", "y cant mario crawl?"}
+					"attack while its tail's up!", "what a horrible night to have a curse", "is this loss?", "establishing connection to nsa servers..",
+					"mari0 over, i blame maurice", "making palette inaccurate...", "y cant mario crawl?", "pink is best cOlor", "fixing loading texts"}
 	
 	loadingtext = loadingtexts[math.random(#loadingtexts)]
 	

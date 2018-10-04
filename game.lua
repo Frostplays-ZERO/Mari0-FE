@@ -11,6 +11,9 @@ function game_load(suspended)
 	--LINK STUFF
 	mariocoincount = 0
 	marioscore = 0
+	globools = {}
+	globints = {}
+	
 	
 	--get mariolives
 	mariolivecount = 3
