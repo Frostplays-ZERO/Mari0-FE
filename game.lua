@@ -5653,6 +5653,5 @@ globools[id] = true
 elseif para == "false" then
 globools[id] = false
 end
-
-return globools[id] or false --sanitise outputs so nil is never returned
+return globools[id] --sanitise outputs so nil is never returned
 end

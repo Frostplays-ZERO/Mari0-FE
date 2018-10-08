@@ -62,8 +62,8 @@ disableportalgun:player				disable portal gun of player
 
 --[[ FES:
 (--DOC)
-TRIGGER	whenboolis			whenever a boolean is true		#needs v[2]		#imp
-CONDITION 	ifbool			only if a boolean is true (can be inverted)		#undef	#unimp
+TRIGGER	whenboolis			whenever a boolean is true						#def		#imp
+CONDITION 	ifbool			only if a boolean is true (can be inverted)			#def		#imp
 ACTION	dotobool			set and/or flip a boolean (three modes of one action)	#undef	#unimp
 ]]--
 
@@ -431,6 +431,7 @@ function animation:update(dt)
 				
 			elseif v[1] == "enableportalgun" then
 				if v[2] == "everyone" then
+			
 					for i = 1, players do
 						objects["player"][i].portalgundisabled = false
 					end
@@ -440,6 +441,8 @@ function animation:update(dt)
 						objects["player"][i].portalgundisabled = false
 					end
 				end
+			elseif v[1] == "dotobool" then
+				globoolSH(v[2],v[3])
 			end
 			
 			self.currentaction = self.currentaction + 1
@@ -484,7 +487,7 @@ function animation:trigger()
 					break
 				end
 			elseif v[1] == "ifbool" then
-				if globoolsSH(v[2], "check") ~= v[3] then
+				if globoolSH(v[2], "check") ~= v[3] then
 					pass = false
 					break
 				end

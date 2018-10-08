@@ -9,7 +9,7 @@ region triggers can now detect a specific enemy category - just type a number in
 
 added givesacoin, givesdecacoin, and givestime for custom enemies. these override givesalife.
 
-also added givestimeamount.
+also added givestimeamount and givescoinamount.
 
 changed folder to mari0_fe so that things don't crash in unmodded SE.
 
@@ -28,4 +28,8 @@ deleted the map previews of /smb/ so it fit.
 
 minor text and QoL changes - logic gates are invisible by default, other things that shouldn't change anything
 
-added internal flags --GCP for a modular function that's being worked on, --HAK for a particularly hacky piece of code, and more to come
+added internal flags --GCP for a modular function that's being worked on, --HAK for a particularly hacky piece of code, --DOC for documentation of what something is supposed to do, --DB for debug, --TODO for obvious reasons and more to come
+
+added globools, globints, and globoolSH(id, func) to game.lua --TODO: add more
+
+added a globool related condition and trigger to animations, action to come
