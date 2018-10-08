@@ -127,8 +127,8 @@ function love.errhand(msg)
 
 	local err = {}
 
-	table.insert(err, "What did I break now...\n")
-	table.insert(err, "Mari0 Over.")
+	table.insert(err, "God Damnit.\n")
+	table.insert(err, "Mari0 broke again.")
 	table.insert(err, "I blame Maurice.\n\n")
 	if not versionerror then
 		table.insert(err, "If you're better at lua than me, send me a fix at git.io/fA7Af.\n Otherwise, a screenshot will do.\n")
@@ -384,7 +384,7 @@ function love.load(arg)
 	
 	fontimage = love.graphics.newImage("graphics/font.png")
 	fontimageback = love.graphics.newImage("graphics/fontback.png")
-	fontglyphs = "0123456789abcdefghijklmnopqrstuvwxyz.:/,\"C-_A* !{}?'()+=><#%"
+	fontglyphs = "0123456789abcdefghijklmnopqrstuvwxyz.:/,\"C-_A* !{}?'()+=><#%OU"
 	fontquads = {}
 	for i = 1, string.len(fontglyphs) do
 		fontquads[string.sub(fontglyphs, i, i)] = love.graphics.newQuad((i-1)*8, 0, 7, 8, fontimage:getWidth(), fontimage:getHeight())
@@ -396,13 +396,13 @@ function love.load(arg)
 	
 	love.graphics.clear()
 	love.graphics.setColor(100, 100, 100)
-	loadingtexts = {"reticulating splines", "rendering important stuff", "01110000011011110110111001111001", "sometimes, i dream about cheese",
-					"baking cake", "happy explosion day", "raising coolness by a fifth", "yay facepunch", "stabbing myself", "sharpening knives",
-					"tanaka, thai kick", "slime will find you", "becoming self-aware", "it's a secret to everybody", "there is no minus world", 
-					"oh my god, jc, a bomb", "silly loading message here", "motivational art by jorichi", "love.graphics.print(\"loading..\", 200, 120)",
+	loadingtexts = {"reticulating splines", "rendering important stuff", "70 6f 6e 79", 
+					"baking caaaake...", "happy explosion day", "raising coolness by a fifth", "lOvely pink umlauts", "stabbing myself", "sharpening knives",
+					"tanaka, thai kick", "compiling things", "becoming self-aware", "it's a secret to everybody", "there is no minus world", 
+					"oh my god, jc, a bomb", "silly loading message here", "motivational art by jorichi", "you only get one shot",
 					"you're my favorite deputy", "licensed under wtfpl", "banned in argentina", "loading anti-piracy module", "watch out there's a sni",
-					"attack while its tail's up!", "what a horrible night to have a curse", "han shot first", "establishing connection to nsa servers..",
-					"how do i programm", "making palette inaccurate..", "y cant mario crawl?"}
+					"attack while its tail's up!", "what a horrible night to have a curse", "is this loss?", "establishing connection to nsa servers..",
+					"math.random(#loadingtexts)", "making palette inaccurate...", "y cant mario crawl?", "fixing syntax errors", "searching stackoverflow"}
 	
 	loadingtext = loadingtexts[math.random(#loadingtexts)]
 	
@@ -425,7 +425,7 @@ function love.load(arg)
 	
 	love.graphics.draw(logo, love.graphics.getWidth()/2, love.graphics.getHeight()/2, 0, logoscale, logoscale, 142, 150)
 	love.graphics.setColor(150, 150, 150)
-	properprint("loading mari0 se..", love.graphics.getWidth()/2-string.len("loading mari0 se..")*4*scale, love.graphics.getHeight()/2-170*logoscale-7*scale)
+	properprint("loading mari0 fe...", love.graphics.getWidth()/2-string.len("loading mari0 fe...")*4*scale, love.graphics.getHeight()/2-170*logoscale-7*scale)
 	love.graphics.setColor(50, 50, 50)
 	properprint(loadingtext, love.graphics.getWidth()/2-string.len(loadingtext)*4*scale, love.graphics.getHeight()/2+165*logoscale)
 	love.graphics.present()
