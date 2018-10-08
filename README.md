@@ -20,13 +20,12 @@ kooparedflying is fixed - shoutouts to Alesan for this.
 
 scaffolds are no longer invisible in the editor.
 
+Action Blocks are no longer blue.
 
 deleted the map previews of /smb/ so it fit.
+
 ---------------
 
-Commit 2:
+minor text and QoL changes - logic gates are invisible by default, other things that shouldn't change anything
 
-Changed Files: game
-
-merged givesdecacoin into givesacoin, and added givescoinamount for consistency and flexibility 
-
+added internal flags --GCP for a modular function that's being worked on, --HAK for a particularly hacky piece of code, and more to come

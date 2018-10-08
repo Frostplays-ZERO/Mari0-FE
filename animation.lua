@@ -59,6 +59,14 @@ enableportalgun:player				enable portal gun of player
 disableportalgun:player				disable portal gun of player
 --]]
 
+
+--[[ FES:
+(--DOC)
+TRIGGER	whenboolis			whenever a boolean is true		#needs v[2]		#imp
+CONDITION 	ifbool			only if a boolean is true (can be inverted)		#undef	#unimp
+ACTION	dotobool			set and/or flip a boolean (three modes of one action)	#undef	#unimp
+]]--
+
 function animation:init(path, name)
 	self.filepath = path
 	self.name = name
@@ -171,6 +179,10 @@ function animation:update(dt)
 			end
 			
 			if trig then
+				self:trigger()
+			end
+		elseif v[1] == "whenboolis" then
+			if globoolSH(v[2],"check") then
 				self:trigger()
 			end
 		end
@@ -468,6 +480,11 @@ function animation:trigger()
 				end
 			elseif v[1] == "requirecoins" then
 				if mariocoincount < tonumber(v[2]) then
+					pass = false
+					break
+				end
+			elseif v[1] == "ifbool" then
+				if globoolsSH(v[2], "check") ~= v[3] then
 					pass = false
 					break
 				end

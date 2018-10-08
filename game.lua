@@ -5642,3 +5642,17 @@ function checkportalremove(x, y)
 		end
 	end
 end
+
+function globoolSH(id, para) --GCP: this will be used a lot
+--DOC: a simple function, unites four things that i'll be doing a lot with globools into a single, easy-to-fix shorthand
+
+if para == "flip" then
+globools[id] = not globools[id]
+elseif para == "true" then
+globools[id] = true
+elseif para == "false" then
+globools[id] = false
+end
+
+return globools[id] or false --sanitise outputs so nil is never returned
+end

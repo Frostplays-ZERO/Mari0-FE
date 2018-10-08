@@ -94,7 +94,18 @@ table.insert(toenter, {name = "playeryless",
 	}
 })
 
-
+table.insert(toenter, {name = "whenboolis",
+	t = {
+		t="trigger",
+		nicename="if boolean:",
+		entries={
+			{
+				t="input",
+				default="mybool"
+			},
+		}
+	}
+})
 
 --CONDITIONS:
 
@@ -151,6 +162,25 @@ table.insert(toenter, {name = "requirecoins",
 		entries={
 			{
 				t="numinput",
+			}
+		}
+	}
+})
+
+table.insert(toenter, {name = "ifbool",
+	t= {
+		t="condition",
+		nicename="if boolean",
+		entries={
+			{
+				t="input",
+			},
+			{
+				t="text",
+				value="is",
+			},
+			{
+				t="booleanselection"
 			}
 		}
 	}
@@ -910,7 +940,12 @@ function animationguiline:init(tabl, t2)
 					dropdown = true
 					dropwidth = 5
 					args = {"right", "left"}
-					
+				
+				elseif v.t == "booleanselection" then
+					dropdown = true
+					dropwidth = 5
+					args = {"true", "false", "flip"}
+				
 				elseif v.t == "musicselection" then
 					dropdown = true
 					dropwidth = 15
