@@ -30,6 +30,14 @@ minor text and QoL changes - logic gates are invisible by default, other things 
 
 added internal flags --GCP for a modular function that's being worked on, --HAK for a particularly hacky piece of code, --DOC for documentation of what something is supposed to do, --DB for debug, --TODO for obvious reasons and more to come
 
-added globools, globints, and globoolSH(id, func) to game.lua --TODO: add more
+added globools, globints, and globoolSH(id, func) to game.lua, created globintSH and globintCH, one for setting and the other for checking
 
-added a globool related condition and trigger to animations, action to come
+added globool functionality to animations
+
+added globint condition and action to animations
+
+added zgbooltrigger and zginttrigger, detectors for global booleans and integers respectively
+
+will soon add outputting to globools/globints to custom enemies
+
+warning: global integers are currently apparently broken

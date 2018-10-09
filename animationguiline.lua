@@ -186,6 +186,32 @@ table.insert(toenter, {name = "ifbool",
 	}
 })
 
+table.insert(toenter, {name = "ifint",
+	t= {
+		t="condition",
+		nicename="if integer",
+		entries={
+			{
+				t="input",
+			},
+			{
+				t="text",
+				value="is",
+			},
+			{
+				t="integerselection"
+			},
+			{
+				t="text",
+				value="than",
+			},
+			{
+				t="numinput"
+			}
+		}
+	}
+})
+
 --ACTIONS:
 
 table.insert(toenter, {name = "disablecontrols", 
@@ -856,7 +882,30 @@ table.insert(toenter, {name = "dotobool",
 		}
 	}
 })
-
+table.insert(toenter, {name = "dotoint", 
+	t = {
+		t="action",
+		nicename="change global integer",
+		entries={
+			{
+				t="input"
+			},
+			
+			{
+				t="text",
+				value="by",
+			},
+			
+			{
+				t="intmodselection"
+			},
+			
+			{
+				t="numinput"
+			}
+		}
+	}
+})
 --SORT ALPHABETICALLY (I didn't even know you could greater/less compare strings.)
 table.sort(toenter, function(a, b) return a.t.nicename < b.t.nicename end)
 
@@ -967,6 +1016,16 @@ function animationguiline:init(tabl, t2)
 					dropwidth = 5
 					args = {"true", "false", "flip"}
 				
+				elseif v.t == "intmodselection" then
+					dropdown = true
+					dropwidth = 8
+					args = {"add", "subtract", "set"}
+				
+				elseif v.t == "integerselection" then
+					dropdown = true
+					dropwidth = 8
+					args = {"greater", "less", "equal"}
+					
 				elseif v.t == "musicselection" then
 					dropdown = true
 					dropwidth = 15

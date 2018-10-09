@@ -1,6 +1,4 @@
 function editor_load()
-	print("Better editor loaded!")
-	
 	currentanimation = 1
 	tilecount1 = 168
 	tilecount2 = 74

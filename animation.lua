@@ -63,8 +63,11 @@ disableportalgun:player				disable portal gun of player
 --[[ FES:
 (--DOC)
 TRIGGER	whenboolis			whenever a boolean is true						#def		#imp
+TRIGGER	whenintis			whenever an integer is {>,<,=} a value
 CONDITION 	ifbool			only if a boolean is true (can be inverted)			#def		#imp
-ACTION	dotobool			set and/or flip a boolean (three modes of one action)	#undef	#unimp
+CONDITION	ifint				if an integer is {>,<,+} a value
+ACTION	dotobool			set and/or flip a boolean (three modes of one action)	#def		#imp
+ACTION	dotoint			add, subtact, or set a boolean 
 ]]--
 
 function animation:init(path, name)
@@ -443,6 +446,8 @@ function animation:update(dt)
 				end
 			elseif v[1] == "dotobool" then
 				globoolSH(v[2],v[3])
+			elseif v[1] == "dotoint" then
+				globintSH(v[2],v[3],v[4])
 			end
 			
 			self.currentaction = self.currentaction + 1
@@ -488,6 +493,11 @@ function animation:trigger()
 				end
 			elseif v[1] == "ifbool" then
 				if globoolSH(v[2], "check") ~= v[3] then
+					pass = false
+					break
+				end
+			elseif v[1] == "ifint" then
+				if not globintCH(v[2], v[3], v[4]) then
 					pass = false
 					break
 				end

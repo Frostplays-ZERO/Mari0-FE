@@ -520,6 +520,8 @@ function love.load(arg)
 	require "animationsystem"
 	require "regiondrag"
 	require "regiontrigger"
+	require "zgbooltrigger"
+	require "zginttrigger"
 	require "checkpoint"
 	require "portal"
 	require "portalent"
